@@ -432,15 +432,15 @@ export default class extends Component {
     // Android ScrollView will not scrollTo certain offset when props change
     const callback = () => {
       cb()
-      if (Platform.OS === 'android') {
-        this.state.index === 0 &&
-          this.scrollView.scrollTo({ x: state.width, y: 0, animated: false })
-        this.state.index === this.state.total - 1 &&
-          this.scrollView.scrollTo({
-            x: state.width * this.state.total,
-            animated: false
-          })
-      }
+      // if (Platform.OS === 'android') {
+      //   this.state.index === 0 &&
+      //     this.scrollView.scrollTo({ x: state.width, y: 0, animated: false })
+      //   this.state.index === this.state.total - 1 &&
+      //     this.scrollView.scrollTo({
+      //       x: state.width * this.state.total,
+      //       animated: false
+      //     })
+      // }
     }
     const state = this.state
     let index = state.index
